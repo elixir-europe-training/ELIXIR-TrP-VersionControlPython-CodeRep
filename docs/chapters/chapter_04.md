@@ -28,10 +28,46 @@ just attach the ID of the video to a youtube embedded video link: `https://youtu
 
 ## 4.5 Graphical overview of concepts and terminology
 
+### What is a git repository
+
 A project folder usually contains only the latest version of your files (in case of cloud storage you might have some file history). Such project folder can be converted into a *Git repository* (how to do so described in Section 4.6) if the folder will track changes in files and directories. In other words, a **Git repository** (or just **repository**) is centralized location of files and all changes made to the files.
+
+### What is a fork
 
 If several people work on the same project you would need to have shared access to the same Git repository. However, different people might have different level of experience and project owner might limit writing access to the project repository. How to contribute to the project in this case? You have to work on your *own copy* of the repository in order to make changes. In other words, you have to work on your **fork**.
 
 <img src="../img/chapter_4/forking.png" alt="What is fork" width="200"/>
+
+### What is a commit
+
+Your repository (your file(s)) is in a certain state. Every change moves the repository to a new state. Every change added to the sequence of changes is called **commit**.
+
+TODO: image from Trilogy
+
+Every commit has:
+- content - what?
+- a message - why?
+- an author - who?
+- a timestamp - when?
+- unique identifier - tracking number
+
+TODO: image from Trilogy
+
+### What is a branch
+
+A sequence of commits (changes) is referred to as **branch**. A new branch can be created by branching off from a commit on another branch. A branch can also be understood as a named version of your repository.
+
+TODO: image from Trilogy
+
+
+
+### What is the difference between a *fork* and a *branch*?
+
+1. Fork is a copy of a repository, branch is parallel version of a code within the same repository. 
+2. Fork is independent from the original repository, if the original repository is deleted, the fork remains. Branch exists on specific repository, if it si deleted, branch is also deleted.
+3. Fork is mandatory if you do not have writing access to an original repository. Branch is recommended when you start development of new feature (fixing a bug).
+4. Changes made in fork are *proposed* to original repository via *pull requests*. Changes made in branch are *merged* into another branch on the same repository.
+
+TODO: image from Trilogy (Quick recap)
 
 ## 4.6 Case study 0 - working with local repository
