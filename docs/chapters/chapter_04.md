@@ -28,4 +28,10 @@ just attach the ID of the video to a youtube embedded video link: `https://youtu
 
 ## 4.5 Graphical overview of concepts and terminology
 
+A project folder usually contains only the latest version of your files (in case of cloud storage you might have some file history). Such project folder can be converted into a *Git repository* (how to do so described in Section 4.6) if the folder will track changes in files and directories. In other words, a **Git repository** (or just **repository**) is centralized location of files and all changes made to the files.
+
+If several people work on the same project you would need to have shared access to the same Git repository. However, different people might have different level of experience and project owner might limit writing access to the project repository. How to contribute to the project in this case? You have to work on your *own copy* of the repository in order to make changes. In other words, you have to work on your **fork**.
+
+<img src="../img/chapter_4/forking.png" alt="What is fork" width="200"/>
+
 ## 4.6 Case study 0 - working with local repository
