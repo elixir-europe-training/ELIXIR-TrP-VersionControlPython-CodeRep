@@ -11,7 +11,7 @@ As discussed previously, there are a wide variety of hosting services. Here, onl
 In this example, we will make a fresh repository on GitHub, make some changes from the browser, and clone a local copy so that we can work on it offline.
 
 !!! info Note
-    If you already have a local repository, like we have done in the previous chapter, go to chapter 4.2.
+    Chapter 4.2 describes the variation if you already have a local repository (like we have done in the previous chapter).
 
 ### Create a repo on GitHub
 
@@ -55,7 +55,9 @@ Now there are several options:
 
 ![Clone GHD](images/clone-repo-ghd.png)
 
-- Otherwise, copy the line of link (with the button on the right). Go to your preferred IDE and clone the repo there. ===Screenshots!===
+- Otherwise, copy the line of link (with the button on the right). Go to your preferred IDE and clone the repo there. 
+
+![Clone PyCharm](images/clone-pyc.png)
 
 - If you work with commandlines, go to the parent folder where you want the new repo to be copied into, and then use the `git clone` command (replacing `<some-parent-folder>` and `<your-github-id>`):
 
@@ -68,16 +70,48 @@ Look inside the `learn-git` folder. You have the new repo cloned onto your compu
 
 ### Make changes locally and keep the remote updated
 
-As you make new changes in this folder, you can make local commits just as you did in #3.6. As long as you are on a single branch, the only extra step to take to update the remote is "pushing". Here is an example:
+As you make new changes in this folder, you can make local commits just as you did in #3.6. 
 
-===screenshots====
+!!! example "Exercise"
+    If you want to make an edit to the `README.md` file, what steps do you need to take to make the commit?
 
+    ??? success "Solution"
+        1. Edit with an editor of your choice.
+        ![Edit file](images/edit-readme.png)
+        2. Stage `README.md` file.
+        ![Adding changed file](images/stage-readme-ghd.png)
+        3. Make commit.
+        ![Adding changed file](images/commit-readme-ghd.png)
+
+As long as you are on a single branch, the only extra step to take to update the remote is "pushing". 
+
+In GitHub Desktop, this is done by simply clicking the `Push` button on the top banner:
+
+![GitHub Desktop push](images/push-origin-ghd.png)
+
+Have a look on the GitHub website. It's updated with the local changes!
+
+![GitHub website updated](images/github-updated.png)
 
 ## 4.2 Setting up a new online repository for an existing local repository
 
 Sometimes, we may have already written some code and created a local repository (like what we did in #3.6). Now we want to set up a remote repository and send our code to it, so that our local work is backed up online, and later be shared.
 
-If you have followed through #4.1 as well, you will find this very familiar, except in some small details. 
+Here we use an example of `learn-git1` local repository with 2 files already commited.
+
+### Publish with GitHub Desktop
+
+If you use GitHub Desktop, the process is very easy. On the top banner, click the `Publish repository` button.
+
+![Publish banner button](images/publish-banner-ghd.png)
+
+Then enter descriptions and click publish! All done.
+
+![Publish](images/publish-ghd.png)
+
+### Without GitHub Desktop
+
+The whole process is similar to Chapter 4.1, except in some small details. 
 
 ### Create a repo on GitHub
 
@@ -87,11 +121,33 @@ First, log in to GitHub. Click the "+" and then "New repository" on the top righ
 
 Then, give the new repo a meaningful name (probably sensible to be the same as your local folder name). To make life simple, do NOT initialize or add any files.
 
+![Create new repo](images/create-repo-noinit.png)
+
 !!! example "Exercise"
     What will happen if we initialized with, e.g. a README file?
 
     ??? success "Solution"
         The remote repo on Github will have the README file, while our local repo does not. On the other hand, remember that our local repo has some existing codes that the remote does not have. Therefore, as soon as we try to link the two together, there will be a conflict.
 
-Click the big green button at the bottom. Simple as that, we made a repository on GitHub.
+Click the big green button at the bottom to create the repo.
+
+### Connect to the local repo
+
+Since the new online repository is completely empty, GitHub then shows you exactly how to connect to the local repository.
+
+With your IDE, go to the version control tab and look for `Manage remote`. 
+
+![Manage remote](images/pyc-manageremote.png)
+
+Click `Add remote`, and paste in the URL to the GitHub repository page.
+
+![Add remote](images/pyc-add-remote.png)
+
+Now, do a *push*, which will update all the existing local commits to the remote.
+
+![Push to new repo](images/pyc-push-to-new-remote.png)
+
+That's all done! Have a look on the GitHub website. It's updated with the local changes!
+
+![GitHub website updated](images/github-updated-1.png)
 
