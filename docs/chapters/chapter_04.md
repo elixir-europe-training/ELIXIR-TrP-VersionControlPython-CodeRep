@@ -151,3 +151,48 @@ That's all done! Have a look on the GitHub website. It's updated with the local 
 
 ![GitHub website updated](images/github-updated-1.png)
 
+
+## 4.3 Making branches and collaborating
+
+Now the project is growing, and some colleagues want to work on the code together. Without Git, this would be a slow process, as only one of you can work on the code at a time. Otherwise, it would be difficult to combine the changes.
+
+With Git, however, code collaboration can work very efficiently. This is achieved by branching, merging and pull requests.
+
+### Editing on a new branch
+
+As explained in Chapter 3 and 5, the purpose of *branches* is to separate different strands of work. 
+
+Here for example, while your colleague will write some hypothesis tests on the data, you would like to make more plots to visualize data. So, before coding, you create and checkout a branch `visualization`.
+
+> *Checkout* simply means making this the active branch, so that the following edits will be made on this branch.
+
+In GitHub Desktop, click the branch box on the top banner, and click new branch.
+
+![GHD New Branch](images/ghd-new-branch.png)
+
+Enter the new branch name and create.
+
+![GHD Create branch](images/ghd-create-branch-visualization.png)
+
+After switching, the active branch is now `visualization` which can be seen on the top banner.
+
+Alternatively, in PyCharm, create the new branch from the Git menu:
+
+![PyCharm New branch](images/pyc-newbranch.png)
+
+To verify the active branch, look for the Git symbol at the bottom of the screen. Most IDEs have a similar display.
+
+![PyCharm active branch](images/pyc-verify-branch-visualization.png)
+
+Now you can modify the code, without the need to worry about what your colleague is doing. After some hard work in coding, you can stage, commit and push as usual. Everything is saved on the new `visualization` branch.
+
+### Merging and pull requests
+
+When you think you have finished all the codes related to `visualization`, you will want to *merge* this branch back to the base branch (in our case `master`), so that collaborators and users will be able to see and use these codes by default.
+
+To do this, we first open a *pull request*. 
+
+Go to the repository webpage on GitHub, and click on the "Pull requests" tab. GitHub likely realizes that you are opening the pull request for the most recent branch, `visualization`. Click the green "Compare & pull request" button.
+
+![Pull requests](images/gh-new-pr.png)
+
