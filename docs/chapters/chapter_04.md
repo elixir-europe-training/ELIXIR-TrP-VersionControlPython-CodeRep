@@ -158,6 +158,15 @@ Now the project is growing, and some colleagues want to work on the code togethe
 
 With Git, however, code collaboration can work very efficiently. This is achieved by branching, merging and pull requests.
 
+### Adding collaborators
+
+You may have noticed the setting of *public* or *private* during the creation of the GitHub repository. They control whether this repository is visible to everyone. Being public, however, doesn't mean anyone can change the code in your repository.
+
+By default, only you, the repository owner, can contribute to the repository (push code). To add collaborators, go to the repository settings, and then "collaborators".
+
+![Add collaborators](images/gh-add-collab.png)
+
+
 ### Editing on a new branch
 
 As explained in Chapter 3 and 5, the purpose of *branches* is to separate different strands of work. 
@@ -190,9 +199,99 @@ Now you can modify the code, without the need to worry about what your colleague
 
 When you think you have finished all the codes related to `visualization`, you will want to *merge* this branch back to the base branch (in our case `master`), so that collaborators and users will be able to see and use these codes by default.
 
-To do this, we first open a *pull request*. 
+To do this, we first open a *pull request* (PR). 
 
 Go to the repository webpage on GitHub, and click on the "Pull requests" tab. GitHub likely realizes that you are opening the pull request for the most recent branch, `visualization`. Click the green "Compare & pull request" button.
 
 ![Pull requests](images/gh-new-pr.png)
+
+!!! info Note
+    If there is no "Compare & pull request" prompt, click on the "New pull request" green button instead, and then manually choose which branch to merge.
+
+Then, GitHub will show what is different between the `visualization` and `master` branches. 
+
+![Pull request changes](images/gh-pr-compare.png)
+
+When opening the pull request, remember to include a clear description of what changes are made in the new branch.
+
+![Pull request open](images/gh-pr-open.png)
+
+ It may seem a little unnecessary if it is only you and your colleague sitting right next to your desk coding this together, but this will become really important when 15 collaborators end up working on the same project, most of whom only checking in once in a while...
+
+ On the right of the screen, there are several further details you can add to the PR:
+
+- Reviewers are the people who will read and check your new code. This is usually different from the author of this PR. The importance of code review is covered in other parts of the CodeRep course.
+- Assignees are the people who are responsible to work on the PR until it's merged into the master.
+- Labels, projects and milestones are all 'tags' to signify the importance of the code in this PR. They are commonly used in larger projects.
+
+Let's go ahead and open the PR.
+
+### Conflict resolution
+
+In this case, your colleague has already finished their part on hypothesis tests. They have merged to `master` before you opened `visualization` PR. This has caused a conflict in the codes, which GitHub detects:
+
+![PR Conflict](images/gh-pr-conflict.png)
+
+!!! info "Note"
+    What exactly is causing this conflict?
+    ![PR conflict diagram](images/pr-conflict-diagram.png)
+    In short, both `master` and `visualization` have changed the same file(s).
+
+    In detail: When you started working on the master branch, you started from the commit labelled "SPLIT" on `master` branch. Now, you are trying to merge the "CURRENT" commit on `master` with "LAST" commit on `visualization`. Both "CURRENT" and "LAST" include changeds to `script.py`, but independent changes, from "SPLIT". Therefore, Git is not sure how to merge these.
+
+Luckily, with Git, this is not scary at all. There are several ways to make this merge, and here we introduce a recommended workflow. 
+
+> Always try to keep `master` (or `main` or any base branches) clean.
+
+On the local computer, do a *pull*. Literally, this is the opposite of *push*, so the local is up-to-date with remote. Now the local repository also contains the work your colleague has done.
+
+In GitHub Desktop: ![GHD pull](images/ghd-pull.png)
+
+In PyCharm: ![PyCharm pull](images/pyc-pull.png)
+
+Check that you are still on `visualization`. Then *merge* `master` into `visualization`.
+
+In GitHub Desktop, there is a quick one-step button to do this: ![GHD merge master](images/ghd-merge-master.png)
+
+In PyCharm or other IDEs, go to merge: ![PyCharm merge](images/pycharm-merge.png)
+
+!!! info "Which way to merge?"
+    The direction of merging can be confusing in the beginning. If you want to merge A into B (B end up containing changes of A), stay on (checkout) B, and perform merge A.
+
+Either way, you will hopefully be prompted the same conflict seen on the GitHub. This will automatically tell any IDE you use, that you are trying to resolve a merge conflict. For example in PyCharm,
+
+![PyCharm Conflict](images/pyc-conflict-resolve.png)
+
+Click resolve, and then click merge.
+
+![PyCharm conflict merge](images/pyc-conflict-merge.png)
+
+This will then bring up the Merge Revision window.
+
+![PyCharm merging](images/pyc-merging.png)
+
+Here, one branch to merge is on the left (e.g. `visualization`), the other to merge on the right (e.g. `master`), and your desired merge results is in the middle. You can pick and choose whether you want to keep each changes on the two branches by clicking the "<<" or ">>" arrows next to the changes.
+
+In this case, both branches are adding new codes, so we want to include all changes. Finally click apply.
+
+If there are multiple files that have been changed both sides, go through this process for each file. Hopefully, in the end, everything will be resolved.
+
+GitHub Desktop shows this good new explicitly: 
+
+![GHD resolved](images/ghd-resolved.png)
+
+Click "contiunue merging", to make a commit after the merge work. Alternatively, in IDEs, simply make a new commit for all the merged files.
+
+Now, make a *push* again, and look at the PR page.
+
+![PR no conflict](images/gh-no-conflicts.png)
+
+Great, no more conflicts to merge! The new code is now ready to be merged into the base branch - if the reviewer approves. So, suppose your colleague has no objection, click the green "Merge pull request" button and confirm.
+
+All the new visualization codes are now in the `master` branch. Meanwhile, the `visualization` branch is no longer needed, so GitHub suggests that you can delete that branch.
+
+![PR merged](images/gh-merged-delete.png)
+
+!!! info "Important"
+    Why all the convoluted steps? In these steps, we introduced how to keep our working feature branch up-to-date with the new developments on `master`. In general, it is **a very good practice** to frequently pull and merge `master` (or another base branch) into the feature branch, instead of after all the work has finished. This way, it is less likely to see conflicts, and even if there are, they will be smaller ones which do not require a lot of head-scratching to resolve.
 
