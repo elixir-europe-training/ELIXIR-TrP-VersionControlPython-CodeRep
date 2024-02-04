@@ -4,7 +4,9 @@ nav:
     - Course Content:
       - "1. title of first chapter": chapters/chapter_01.md
       - "2. title of second chapter": chapters/chapter_02.md
+      - "4. Learn the workflow from case studies": chapters/chapter_04.md
       - "5. Advanced topics": chapters/chapter_05.md
+      - "6. Data management, data sharing & ethical issues": chapters/chapter_06.md
       - "References": chapters/references.md
     - "Follow up training": follow_up_training.md
 
