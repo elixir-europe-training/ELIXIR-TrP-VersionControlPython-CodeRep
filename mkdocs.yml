@@ -4,6 +4,7 @@ nav:
     - Course Content:
       - "1. title of first chapter": chapters/chapter_01.md
       - "2. title of second chapter": chapters/chapter_02.md
+      - "5. Advanced topics": chapters/chapter_05.md
       - "References": chapters/references.md
     - "Follow up training": follow_up_training.md
 
@@ -48,7 +49,11 @@ markdown_extensions:
   - smarty
   - toc:
       toc_depth: 3
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - attr_list
   - pymdownx.tabbed
   - pymdownx.details
@@ -59,6 +64,7 @@ markdown_extensions:
         custom_icons:
           - overrides/.icons
   - neoteroi.cards
+
 
 
 extra_css:
