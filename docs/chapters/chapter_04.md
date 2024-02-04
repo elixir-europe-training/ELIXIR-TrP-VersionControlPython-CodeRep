@@ -11,7 +11,7 @@ As discussed previously, there are a wide variety of hosting services. Here, onl
 In this example, we will make a fresh repository on GitHub, make some changes from the browser, and clone a local copy so that we can work on it offline.
 
 !!! info Note
-    Chapter 4.2 describes the variation if you already have a local repository (like we have done in the previous chapter).
+    Chapter 4.2 describes the variation if you already have a local repository.
 
 ### Create a repo on GitHub
 
@@ -83,7 +83,7 @@ As you make new changes in this folder, you can make local commits just as you d
         3. Make commit.
         ![Adding changed file](images/commit-readme-ghd.png)
 
-As long as you are on a single branch, the only extra step to take to update the remote is "pushing". 
+As long as you are on a single branch, the only extra step to take to update the remote is *pushing*. This sends all the local changes to the GitHub remote server.
 
 In GitHub Desktop, this is done by simply clicking the `Push` button on the top banner:
 
