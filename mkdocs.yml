@@ -2,8 +2,9 @@ site_name: ELIXIR Training Lesson
 nav:
     - About: index.md
     - Course Content:
-      - "1. title of first chapter": chapters/chapter_01.md
-      - "2. title of second chapter": chapters/chapter_02.md
+      - "1. What is version control": chapters/chapter_01.md
+      - "2. Git & Git hosting services": chapters/chapter_02.md
+      - "3. Getting familiar with Git and GitHub": chapters/chapter_03.md
       - "4. Learn the workflow from case studies": chapters/chapter_04.md
       - "5. Advanced topics": chapters/chapter_05.md
       - "6. Data management, data sharing & ethical issues": chapters/chapter_06.md
@@ -23,8 +24,8 @@ theme:
     text: Lato
 
 # Repository
-repo_name: elixir-europe-training/ELIXIR-TrP-LessonTemplate-MkDocs
-repo_url: https://github.com/elixir-europe-training/ELIXIR-TrP-LessonTemplate-MkDocs
+repo_name: elixir-europe-training/ELIXIR-TrP-VersionControlPython-CodeRep
+repo_url: https://github.com/elixir-europe-training/ELIXIR-TrP-VersionControlPython-CodeRep
 edit_uri: edit/main/docs/
 
 plugins:

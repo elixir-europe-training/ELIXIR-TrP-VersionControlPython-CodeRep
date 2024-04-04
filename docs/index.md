@@ -10,28 +10,32 @@ Greek Mythology icons made by [max.icons](https://www.flaticon.com/authors/maxic
 
 !!! overview ""
     :fontawesome-regular-bookmark: **Description**  
-    Add a short description of the training materail should be inserted here. 
+    Version control is the lab notebook of the digital world. It helps us understand what changes we made in the past and why we did a specific analysis in the way we did it. It is also vital for smooth collaboration where different people work on the same code simultaneously. Using version control for your research project means that your work is totally transparent, and because all your actions are recorded, it enables others to reproduce your studies.
+
+    In this series, we will cover the basics of using Git with the GUI provided in PyCharm. Git is a open source, free of charge, and powerful version control tool, and we will demonstrate the few simple steps to boost your code organisation and reproducibility, all without the need of command line knowledge. We will then use GitHub to host and share our scripts, and show hands-on examples of how GitHub can facilitate code collaboration.
+
     
     </br>
     
     :fontawesome-solid-arrow-left: **Prerequisites**  
     To be able to follow this course, learners should have knowledge in:  
-    &emsp;1. First requirement  
-    &emsp;2. Second requirement  
+    &emsp;1. No previous knowledge of Git assumed
+    &emsp;2. Able to understand and write simple Python scripts 
     
     </br>
     
     :fontawesome-solid-arrow-right: **Learning Outcomes:**  
     By the end of the course, learners will be able to:  
-    &emsp;1. First item  
-    &emsp;2. Second item  
+    &emsp;1. Understand the purpose and functionality of version control tools (e.g. Git)
+    &emsp;2. Know how to create and use a local repository with Git UI in PyCharm
+    &emsp;3. Know how to collaborate on a remote repository on GitHub
     
     </br>
     
     :fontawesome-solid-users: **Target Audience:** Researchers, undergraduate students, postgraduate students, etc...  
     </br>
     
-    :fontawesome-solid-stairs: **Level:** Beginner/Intermediate/Advanced  
+    :fontawesome-solid-stairs: **Level:** Beginner 
     
     :fontawesome-solid-lock: **License:** [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)  
     
@@ -61,10 +65,9 @@ Please cite as:
 ---
 ## Setup
 
-### Data setup
-To run this lesson you need to install data from …
-
 ### Software setup
-To run this course you need to install… continue with software installation instructions
+To run this course you need to install Git. Details for Git setup is described in Chapter 3.
+
+We also introduce how to use Git with a GUI (GitHub Desktop as an example) / IDE (PyCharm as an example). 
 
 
