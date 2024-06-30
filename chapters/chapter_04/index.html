@@ -1,0 +1,968 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "LearningResource",
+    "@id": "https://elixir-europe-training.github.io/ELIXIR-TrP-LessonTemplate-MkDocs/",
+    "http://purl.org/dc/terms/conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+    },
+    "description": "Template for ELIXIR lessons",
+    "keywords": "FAIR, OPEN, Bioinformatics, Teaching",
+    "name": "ELIXIR Training Lesson template",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "educationLevel": "beginner",
+    "competencyRequired": "none",
+    "teaches": "nothing yet to teach"
+}
+</script>
+
+    
+      
+        <title>4. Learn the workflow from case studies - ELIXIR Training Lesson</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/neoteroi-mkdocs.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4-learn-the-workflow-from-case-studies" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+This lesson is under active development and considered pre-alpha.
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ELIXIR Training Lesson" class="md-header__button md-logo" aria-label="ELIXIR Training Lesson" data-md-component="logo">
+      
+  <img src="../../assets/images/white-orange-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ELIXIR Training Lesson
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. Learn the workflow from case studies
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/elixir-europe-training/ELIXIR-TrP-VersionControlPython-CodeRep" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    elixir-europe-training/ELIXIR-TrP-VersionControlPython-CodeRep
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ELIXIR Training Lesson" class="md-nav__button md-logo" aria-label="ELIXIR Training Lesson" data-md-component="logo">
+      
+  <img src="../../assets/images/white-orange-logo.png" alt="logo">
+
+    </a>
+    ELIXIR Training Lesson
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/elixir-europe-training/ELIXIR-TrP-VersionControlPython-CodeRep" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    elixir-europe-training/ELIXIR-TrP-VersionControlPython-CodeRep
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Course Content
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Course Content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. What is version control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Git & Git hosting services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_03.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Getting familiar with Git and GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4. Learn the workflow from case studies
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    4. Learn the workflow from case studies
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-starting-a-new-single-person-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Starting a new single person repository
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Starting a new single person repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-repo-on-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a repo on GitHub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#made-changes-from-the-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Made changes from the browser
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clone-the-repo-to-local-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone the repo to local computer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make-changes-locally-and-keep-the-remote-updated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Make changes locally and keep the remote updated
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-setting-up-a-new-online-repository-for-an-existing-local-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Setting up a new online repository for an existing local repository
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Setting up a new online repository for an existing local repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#publish-with-github-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publish with GitHub Desktop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#without-github-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Without GitHub Desktop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-repo-on-github_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a repo on GitHub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-the-local-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect to the local repo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-making-branches-and-collaborating" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Making branches and collaborating
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Making branches and collaborating">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-collaborators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding collaborators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-on-a-new-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing on a new branch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merging-and-pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merging and pull requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conflict-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conflict resolution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Advanced topics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Data management, data sharing & ethical issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../follow_up_training/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Follow up training
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<div><h1 id="4-learn-the-workflow-from-case-studies">4 Learn the workflow from case studies</h1>
+<p>We have now installed Git on our local machine, familiarised ourselves with the interfaces, and tested out a local repository. However, to realize more advantages of version control (e.g. collaboration, improving reproducibility), we will need to take it online.</p>
+<p>This chapter will guide you through exactly how this is done, step by step, from simpler use cases to more advanced ones.</p>
+<p>As discussed previously, there are a wide variety of hosting services. Here, only as an example, we use the well-known GitHub platform as our remote server. </p>
+<h2 id="41-starting-a-new-single-person-repository">4.1 Starting a new single person repository</h2>
+<p>In this example, we will make a fresh repository on GitHub, make some changes from the browser, and clone a local copy so that we can work on it offline.</p>
+<div class="admonition info note">
+<p class="admonition-title">Info</p>
+<p>Chapter 4.2 describes the variation if you already have a local repository.</p>
+</div>
+<h3 id="create-a-repo-on-github">Create a repo on GitHub</h3>
+<p>First, log in to GitHub. Click the “+” and then “New repository” on the top right corner.</p>
+<p><img alt="Create new repo" src="../images/add-new-repo.png"></p>
+<p>Then, give the new repo a meaningful name (we will call it <code>learn-git</code>), and why not add a README file. Click the big green button at the bottom. Simple as that, we made a repository on GitHub.</p>
+<p><img alt="Create repo" src="../images/create-repo.png"></p>
+<h3 id="made-changes-from-the-browser">Made changes from the browser</h3>
+<p>A very convenient feature of the online platforms like GitHub is that they allow us to make certain changes directly from the browser. For example, click into the <code>README.md</code> file, and then click on the pencil button on the right hand side:</p>
+<p><img alt="Edit button" src="../images/edit-button.png"></p>
+<p>Now we are in a text editor, and can make any changes we want to this file. Once finished, click the green “Commit changes” to save.</p>
+<div class="admonition info note">
+<p class="admonition-title">Info</p>
+<p>Why the “Commit changes”, but not a simple “Save”? Remember, Git keeps a history for everything. By editing on from the browser, we have essentially done “saving the file”, “stage the file” and “commit changes” with one step!</p>
+</div>
+<p><img alt="Commit change online" src="../images/commit-change-online.png"></p>
+<p>Here you can input a commit message to describe what changes you have made. Then click the green “Commit changes” button again, and all done.</p>
+<h3 id="clone-the-repo-to-local-computer">Clone the repo to local computer</h3>
+<p>For day to day coding and scripting, we probably still want to work locally on our computers with IDEs or more sophisticated editors. To do this in our new repository, we first need to make a local clone on our computer. This is very easy to do.</p>
+<p>Go to the homepage of our repo on Github. Click the green “&lt; &gt; Code” button at the top right corner above the file list. Click on the “SSH” tab.</p>
+<p><img alt="Clone repo" src="../images/clone-repo.png"></p>
+<div class="admonition info note">
+<p class="admonition-title">Info</p>
+<p>SSH is more secure than HTTPS. If you have set up your SSH keys successfully in the previous chapter, always try to use the SSH links.</p>
+</div>
+<p>Now there are several options:</p>
+<ul>
+<li>If you are working with GitHub Desktop, simply click on the link “Open with GitHub Desktop”. You can choose where you want to keep the local copy.</li>
+</ul>
+<p><img alt="Clone GHD" src="../images/clone-repo-ghd.png"></p>
+<ul>
+<li>Otherwise, copy the line of link (with the button on the right). Go to your preferred IDE and clone the repo there. </li>
+</ul>
+<p><img alt="Clone PyCharm" src="../images/clone-pyc.png"></p>
+<ul>
+<li>If you work with commandlines, go to the parent folder where you want the new repo to be copied into, and then use the <code>git clone</code> command (replacing <code>&lt;some-parent-folder&gt;</code> and <code>&lt;your-github-id&gt;</code>):</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>&lt;some-parent-folder&gt;
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:&lt;your-github-id&gt;/learn-git.git
+</code></pre></div>
+<p>Look inside the <code>learn-git</code> folder. You have the new repo cloned onto your computer!</p>
+<h3 id="make-changes-locally-and-keep-the-remote-updated">Make changes locally and keep the remote updated</h3>
+<p>As you make new changes in this folder, you can make local commits just as you did in #3.6. </p>
+<div class="admonition example">
+<p class="admonition-title">Exercise</p>
+<p>If you want to make an edit to the <code>README.md</code> file, what steps do you need to take to make the commit?</p>
+<details class="success">
+<summary>Solution</summary>
+<ol>
+<li>Edit with an editor of your choice.
+<img alt="Edit file" src="../images/edit-readme.png"></li>
+<li>Stage <code>README.md</code> file.
+<img alt="Adding changed file" src="../images/stage-readme-ghd.png"></li>
+<li>Make commit.
+<img alt="Adding changed file" src="../images/commit-readme-ghd.png"></li>
+</ol>
+</details>
+</div>
+<p>As long as you are on a single branch, the only extra step to take to update the remote is <em>pushing</em>. This sends all the local changes to the GitHub remote server.</p>
+<p>In GitHub Desktop, this is done by simply clicking the <code>Push</code> button on the top banner:</p>
+<p><img alt="GitHub Desktop push" src="../images/push-origin-ghd.png"></p>
+<p>Have a look on the GitHub website. It’s updated with the local changes!</p>
+<p><img alt="GitHub website updated" src="../images/github-updated.png"></p>
+<h2 id="42-setting-up-a-new-online-repository-for-an-existing-local-repository">4.2 Setting up a new online repository for an existing local repository</h2>
+<p>Sometimes, we may have already written some code and created a local repository (like what we did in #3.6). Now we want to set up a remote repository and send our code to it, so that our local work is backed up online, and later be shared.</p>
+<p>Here we use an example of <code>learn-git1</code> local repository with 2 files already commited.</p>
+<h3 id="publish-with-github-desktop">Publish with GitHub Desktop</h3>
+<p>If you use GitHub Desktop, the process is very easy. On the top banner, click the <code>Publish repository</code> button.</p>
+<p><img alt="Publish banner button" src="../images/publish-banner-ghd.png"></p>
+<p>Then enter descriptions and click publish! All done.</p>
+<p><img alt="Publish" src="../images/publish-ghd.png"></p>
+<h3 id="without-github-desktop">Without GitHub Desktop</h3>
+<p>The whole process is similar to Chapter 4.1, except in some small details. </p>
+<h3 id="create-a-repo-on-github_1">Create a repo on GitHub</h3>
+<p>First, log in to GitHub. Click the “+” and then “New repository” on the top right corner.</p>
+<p><img alt="Create new repo" src="../images/add-new-repo.png"></p>
+<p>Then, give the new repo a meaningful name (probably sensible to be the same as your local folder name). To make life simple, do NOT initialize or add any files.</p>
+<p><img alt="Create new repo" src="../images/create-repo-noinit.png"></p>
+<div class="admonition example">
+<p class="admonition-title">Exercise</p>
+<p>What will happen if we initialized with, e.g. a README file?</p>
+<details class="success">
+<summary>Solution</summary>
+<p>The remote repo on Github will have the README file, while our local repo does not. On the other hand, remember that our local repo has some existing codes that the remote does not have. Therefore, as soon as we try to link the two together, there will be a conflict.</p>
+</details>
+</div>
+<p>Click the big green button at the bottom to create the repo.</p>
+<h3 id="connect-to-the-local-repo">Connect to the local repo</h3>
+<p>Since the new online repository is completely empty, GitHub then shows you exactly how to connect to the local repository.</p>
+<p>With your IDE, go to the version control tab and look for <code>Manage remote</code>. </p>
+<p><img alt="Manage remote" src="../images/pyc-manageremote.png"></p>
+<p>Click <code>Add remote</code>, and paste in the URL to the GitHub repository page.</p>
+<p><img alt="Add remote" src="../images/pyc-add-remote.png"></p>
+<p>Now, do a <em>push</em>, which will update all the existing local commits to the remote.</p>
+<p><img alt="Push to new repo" src="../images/pyc-push-to-new-remote.png"></p>
+<p>That’s all done! Have a look on the GitHub website. It’s updated with the local changes!</p>
+<p><img alt="GitHub website updated" src="../images/github-updated-1.png"></p>
+<h2 id="43-making-branches-and-collaborating">4.3 Making branches and collaborating</h2>
+<p>Now the project is growing, and some colleagues want to work on the code together. Without Git, this would be a slow process, as only one of you can work on the code at a time. Otherwise, it would be difficult to combine the changes.</p>
+<p>With Git, however, code collaboration can work very efficiently. This is achieved by branching, merging and pull requests.</p>
+<h3 id="adding-collaborators">Adding collaborators</h3>
+<p>You may have noticed the setting of <em>public</em> or <em>private</em> during the creation of the GitHub repository. They control whether this repository is visible to everyone. Being public, however, doesn’t mean anyone can change the code in your repository.</p>
+<p>By default, only you, the repository owner, can contribute to the repository (push code). To add collaborators, go to the repository settings, and then “collaborators”.</p>
+<p><img alt="Add collaborators" src="../images/gh-add-collab.png"></p>
+<h3 id="editing-on-a-new-branch">Editing on a new branch</h3>
+<p>As explained in Chapter 3 and 5, the purpose of <em>branches</em> is to separate different strands of work. </p>
+<p>Here for example, while your colleague will write some hypothesis tests on the data, you would like to make more plots to visualize data. So, before coding, you create and checkout a branch <code>visualization</code>.</p>
+<blockquote>
+<p><em>Checkout</em> simply means making this the active branch, so that the following edits will be made on this branch.</p>
+</blockquote>
+<p>In GitHub Desktop, click the branch box on the top banner, and click new branch.</p>
+<p><img alt="GHD New Branch" src="../images/ghd-new-branch.png"></p>
+<p>Enter the new branch name and create.</p>
+<p><img alt="GHD Create branch" src="../images/ghd-create-branch-visualization.png"></p>
+<p>After switching, the active branch is now <code>visualization</code> which can be seen on the top banner.</p>
+<p>Alternatively, in PyCharm, create the new branch from the Git menu:</p>
+<p><img alt="PyCharm New branch" src="../images/pyc-newbranch.png"></p>
+<p>To verify the active branch, look for the Git symbol at the bottom of the screen. Most IDEs have a similar display.</p>
+<p><img alt="PyCharm active branch" src="../images/pyc-verify-branch-visualization.png"></p>
+<p>Now you can modify the code, without the need to worry about what your colleague is doing. After some hard work in coding, you can stage, commit and push as usual. Everything is saved on the new <code>visualization</code> branch.</p>
+<h3 id="merging-and-pull-requests">Merging and pull requests</h3>
+<p>When you think you have finished all the codes related to <code>visualization</code>, you will want to <em>merge</em> this branch back to the base branch (in our case <code>master</code>), so that collaborators and users will be able to see and use these codes by default.</p>
+<p>To do this, we first open a <em>pull request</em> (PR). </p>
+<p>Go to the repository webpage on GitHub, and click on the “Pull requests” tab. GitHub likely realizes that you are opening the pull request for the most recent branch, <code>visualization</code>. Click the green “Compare &amp; pull request” button.</p>
+<p><img alt="Pull requests" src="../images/gh-new-pr.png"></p>
+<div class="admonition info note">
+<p class="admonition-title">Info</p>
+<p>If there is no “Compare &amp; pull request” prompt, click on the “New pull request” green button instead, and then manually choose which branch to merge.</p>
+</div>
+<p>Then, GitHub will show what is different between the <code>visualization</code> and <code>master</code> branches. </p>
+<p><img alt="Pull request changes" src="../images/gh-pr-compare.png"></p>
+<p>When opening the pull request, remember to include a clear description of what changes are made in the new branch.</p>
+<p><img alt="Pull request open" src="../images/gh-pr-open.png"></p>
+<p>It may seem a little unnecessary if it is only you and your colleague sitting right next to your desk coding this together, but this will become really important when 15 collaborators end up working on the same project, most of whom only checking in once in a while…</p>
+<p>On the right of the screen, there are several further details you can add to the PR:</p>
+<ul>
+<li>Reviewers are the people who will read and check your new code. This is usually different from the author of this PR. The importance of code review is covered in other parts of the CodeRep course.</li>
+<li>Assignees are the people who are responsible to work on the PR until it’s merged into the master.</li>
+<li>Labels, projects and milestones are all ‘tags’ to signify the importance of the code in this PR. They are commonly used in larger projects.</li>
+</ul>
+<p>Let’s go ahead and open the PR.</p>
+<h3 id="conflict-resolution">Conflict resolution</h3>
+<p>In this case, your colleague has already finished their part on hypothesis tests. They have merged to <code>master</code> before you opened <code>visualization</code> PR. This has caused a conflict in the codes, which GitHub detects:</p>
+<p><img alt="PR Conflict" src="../images/gh-pr-conflict.png"></p>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>What exactly is causing this conflict?
+<img alt="PR conflict diagram" src="../images/pr-conflict-diagram.png">
+In short, both <code>master</code> and <code>visualization</code> have changed the same file(s).</p>
+<p>In detail: When you started working on the master branch, you started from the commit labelled “SPLIT” on <code>master</code> branch. Now, you are trying to merge the “CURRENT” commit on <code>master</code> with “LAST” commit on <code>visualization</code>. Both “CURRENT” and “LAST” include changeds to <code>script.py</code>, but independent changes, from “SPLIT”. Therefore, Git is not sure how to merge these.</p>
+</div>
+<p>Luckily, with Git, this is not scary at all. There are several ways to make this merge, and here we introduce a recommended workflow. </p>
+<blockquote>
+<p>Always try to keep <code>master</code> (or <code>main</code> or any base branches) clean.</p>
+</blockquote>
+<p>On the local computer, do a <em>pull</em>. Literally, this is the opposite of <em>push</em>, so the local is up-to-date with remote. Now the local repository also contains the work your colleague has done.</p>
+<p>In GitHub Desktop: <img alt="GHD pull" src="../images/ghd-pull.png"></p>
+<p>In PyCharm: <img alt="PyCharm pull" src="../images/pyc-pull.png"></p>
+<p>Check that you are still on <code>visualization</code>. Then <em>merge</em> <code>master</code> into <code>visualization</code>.</p>
+<p>In GitHub Desktop, there is a quick one-step button to do this: <img alt="GHD merge master" src="../images/ghd-merge-master.png"></p>
+<p>In PyCharm or other IDEs, go to merge: <img alt="PyCharm merge" src="../images/pycharm-merge.png"></p>
+<div class="admonition info">
+<p class="admonition-title">Which way to merge?</p>
+<p>The direction of merging can be confusing in the beginning. If you want to merge A into B (B end up containing changes of A), stay on (checkout) B, and perform merge A.</p>
+</div>
+<p>Either way, you will hopefully be prompted the same conflict seen on the GitHub. This will automatically tell any IDE you use, that you are trying to resolve a merge conflict. For example in PyCharm,</p>
+<p><img alt="PyCharm Conflict" src="../images/pyc-conflict-resolve.png"></p>
+<p>Click resolve, and then click merge.</p>
+<p><img alt="PyCharm conflict merge" src="../images/pyc-conflict-merge.png"></p>
+<p>This will then bring up the Merge Revision window.</p>
+<p><img alt="PyCharm merging" src="../images/pyc-merging.png"></p>
+<p>Here, one branch to merge is on the left (e.g. <code>visualization</code>), the other to merge on the right (e.g. <code>master</code>), and your desired merge results is in the middle. You can pick and choose whether you want to keep each changes on the two branches by clicking the “&lt;&lt;” or “&gt;&gt;” arrows next to the changes.</p>
+<p>In this case, both branches are adding new codes, so we want to include all changes. Finally click apply.</p>
+<p>If there are multiple files that have been changed both sides, go through this process for each file. Hopefully, in the end, everything will be resolved.</p>
+<p>GitHub Desktop shows this good new explicitly: </p>
+<p><img alt="GHD resolved" src="../images/ghd-resolved.png"></p>
+<p>Click “contiunue merging”, to make a commit after the merge work. Alternatively, in IDEs, simply make a new commit for all the merged files.</p>
+<p>Now, make a <em>push</em> again, and look at the PR page.</p>
+<p><img alt="PR no conflict" src="../images/gh-no-conflicts.png"></p>
+<p>Great, no more conflicts to merge! The new code is now ready to be merged into the base branch - if the reviewer approves. So, suppose your colleague has no objection, click the green “Merge pull request” button and confirm.</p>
+<p>All the new visualization codes are now in the <code>master</code> branch. Meanwhile, the <code>visualization</code> branch is no longer needed, so GitHub suggests that you can delete that branch.</p>
+<p><img alt="PR merged" src="../images/gh-merged-delete.png"></p>
+<div class="admonition info">
+<p class="admonition-title">Important</p>
+<p>Why all the convoluted steps? In these steps, we introduced how to keep our working feature branch up-to-date with the new developments on <code>master</code>. In general, it is <strong>a very good practice</strong> to frequently pull and merge <code>master</code> (or another base branch) into the feature branch, instead of after all the work has finished. This way, it is less likely to see conflicts, and even if there are, they will be smaller ones which do not require a lot of head-scratching to resolve.</p>
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../chapter_02/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2. Git &amp; Git hosting services">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                2. Git & Git hosting services
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapter_05/" class="md-footer__link md-footer__link--next" aria-label="Next: 5. Advanced topics">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                5. Advanced topics
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      By the ELIXIR Training Platform
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.footer", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+    
+  </body>
+</html>

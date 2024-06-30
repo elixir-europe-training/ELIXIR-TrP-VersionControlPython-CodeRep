@@ -1,0 +1,1075 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "LearningResource",
+    "@id": "https://elixir-europe-training.github.io/ELIXIR-TrP-LessonTemplate-MkDocs/",
+    "http://purl.org/dc/terms/conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+    },
+    "description": "Template for ELIXIR lessons",
+    "keywords": "FAIR, OPEN, Bioinformatics, Teaching",
+    "name": "ELIXIR Training Lesson template",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "educationLevel": "beginner",
+    "competencyRequired": "none",
+    "teaches": "nothing yet to teach"
+}
+</script>
+
+    
+      
+        <title>6. Data management, data sharing & ethical issues - ELIXIR Training Lesson</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/neoteroi-mkdocs.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6-data-management-data-sharing-and-ethical-issues" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+This lesson is under active development and considered pre-alpha.
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ELIXIR Training Lesson" class="md-header__button md-logo" aria-label="ELIXIR Training Lesson" data-md-component="logo">
+      
+  <img src="../../assets/images/white-orange-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ELIXIR Training Lesson
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6. Data management, data sharing & ethical issues
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/elixir-europe-training/ELIXIR-TrP-VersionControlPython-CodeRep" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    elixir-europe-training/ELIXIR-TrP-VersionControlPython-CodeRep
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ELIXIR Training Lesson" class="md-nav__button md-logo" aria-label="ELIXIR Training Lesson" data-md-component="logo">
+      
+  <img src="../../assets/images/white-orange-logo.png" alt="logo">
+
+    </a>
+    ELIXIR Training Lesson
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/elixir-europe-training/ELIXIR-TrP-VersionControlPython-CodeRep" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    elixir-europe-training/ELIXIR-TrP-VersionControlPython-CodeRep
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Course Content
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Course Content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. What is version control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Git & Git hosting services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_03.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Getting familiar with Git and GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Learn the workflow from case studies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Advanced topics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    6. Data management, data sharing & ethical issues
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    6. Data management, data sharing & ethical issues
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-licensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Licensing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-citation" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Citation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-sharing-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Sharing repositories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-social" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 Social
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 Social">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#follow-people-organisations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Follow people, organisations:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#watching-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Watching the repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploring-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploring projects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../follow_up_training/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Follow up training
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<div><h1 id="6-data-management-data-sharing-and-ethical-issues">6. Data management, data sharing and ethical issues</h1>
+<h2 id="61-licensing">6.1 Licensing</h2>
+<p>Licensing is an essential aspect of open-source projects hosted on GitHub, as it defines how others can use, modify, and distribute your project’s code. GitHub provides a platform for collaboration, but it’s up to the project owner to choose an appropriate license for their project. Here’s a step-by-step guide on how to license your project on GitHub:</p>
+<p><em>Step 1: Choose a License</em></p>
+<p>Before you can license your project, you need to choose a license that aligns with your project’s goals and your preferences for how others can use your code. Common open-source licenses include the MIT License, Apache License 2.0, GNU General Public License (GPL), and many others. You can find a list of licenses and their descriptions on websites like <a href="https://choosealicense.com/">choosealicense.com</a> and <a href="https://opensource.org/licenses">opensource.org</a>.</p>
+<p><em>Step 2: Create a License File</em></p>
+<p>Once you’ve selected a license, you need to create a file in your project repository that contains the full text of the chosen license. You can name this file “LICENSE” or “LICENSE.txt” and place it in the root directory of your repository.</p>
+<p>For example, if you choose the MIT License, the “LICENSE” file might look like this:</p>
+<p>MIT License</p>
+<p>Copyright (c) [year] [your name]</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all</p>
+<p>copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p><em>Step 3: Commit and Push the License File</em></p>
+<p>After creating the license file, commit it to your repository and push the changes to GitHub. This will make the license text accessible to anyone who visits your repository.</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>LICENSE
+
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Add MIT License"</span>
+
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<p><em>Step 4: Indicate the License in Your Repository</em></p>
+<p>To ensure that GitHub correctly recognizes your chosen license, you can specify it in the repository settings:</p>
+<ol>
+<li>
+<p>Go to your GitHub repository on the GitHub website.</p>
+</li>
+<li>
+<p>Click on the “Settings” tab.</p>
+</li>
+<li>
+<p>In the left sidebar, click on “Options.”</p>
+</li>
+<li>
+<p>Scroll down to the “GitHub” section.</p>
+</li>
+<li>
+<p>Under “License,” select the license you’ve chosen from the dropdown menu.</p>
+</li>
+<li>
+<p>Click “Save” to update your repository settings.</p>
+</li>
+</ol>
+<p>By following these steps, your project is now properly licensed, and others will know how they can use and contribute to your codebase. Always make sure to choose a license that aligns with your project’s goals and the level of openness you desire for your code. Additionally, consider including a <code>LICENSE</code> badge in your README file to prominently display your project’s license.</p>
+<h2 id="62-citation">6.2 Citation</h2>
+<p>Citing GitHub projects is essential when you’re referencing or using code or other materials from a repository in your academic, research, or documentation work. Proper citation gives credit to the original authors and helps readers locate the source. Below is an example of how to cite a GitHub project, along with a common citation style (APA) and a modified example for other citation styles like MLA or Chicago.</p>
+<p>GitHub Repository Citation Example (APA Style):</p>
+<p>Author(s). (Year). Title of the GitHub repository. GitHub. URL</p>
+<p>Here’s an example:</p>
+<p>Smith, J. (2022). Awesome Project: A Collection of Useful Code. GitHub. https://github.com/johnsmith/awesome-project</p>
+<p>GitHub Repository Citation Example (MLA Style):</p>
+<p>Author(s). “Title of the GitHub repository.” GitHub, Year, URL.</p>
+<p>Example:</p>
+<p>Smith, John. “Awesome Project: A Collection of Useful Code.” GitHub, 2022, https://github.com/johnsmith/awesome-project.</p>
+<p>GitHub Repository Citation Example (Chicago Style):</p>
+<p>Author(s), “Title of the GitHub repository,” GitHub, Year, URL.</p>
+<p>Example:</p>
+<p>Smith, John, “Awesome Project: A Collection of Useful Code,” GitHub, 2022, https://github.com/johnsmith/awesome-project.</p>
+<p>In these examples:</p>
+<ul>
+<li>Author(s): Include the name(s) of the project owner(s) or contributor(s). If it’s an organization, you can use the organization’s name.</li>
+<li>Year: Mention the year when you accessed or used the GitHub repository. If the project has a specific release or version, you may want to mention that instead.</li>
+<li>Title of the GitHub repository: Include the name of the GitHub repository as it appears on the repository’s main page.</li>
+<li>GitHub: Indicate that the source is from GitHub to clarify the platform.</li>
+<li>URL: Provide the full URL of the GitHub repository. Ensure it’s clickable in your document.</li>
+</ul>
+<p>Please note that citation styles may vary depending on the guidelines of your institution, publisher, or the specific style guide you are using. Always follow the citation style recommended or required by the organization or publication you are submitting your work to.</p>
+<h2 id="63-sharing-repositories">6.3 Sharing repositories</h2>
+<p>Sharing GitHub repositories while considering intellectual property (IP) concerns is crucial to protect your work, respect the rights of others, and ensure that you are compliant with GitHub’s terms of service. Here are some guidelines on how to share GitHub repositories with IP considerations in mind:</p>
+<ol>
+<li>Understand Intellectual Property Rights:</li>
+</ol>
+<ul>
+<li>Before sharing any code on GitHub, make sure you understand intellectual property rights, including copyright, licenses, and patents. Know your rights and responsibilities.</li>
+</ul>
+<ol start="2">
+<li>Choose the Right License:</li>
+</ol>
+<ul>
+<li>Select an appropriate open-source license for your project. Common licenses include MIT, Apache 2.0, GNU GPL, and more. The license you choose defines how others can use, modify, and distribute your code. Clearly specify the license in your repository.</li>
+</ul>
+<ol start="3">
+<li>Respect Third-Party Licenses:</li>
+</ol>
+<ul>
+<li>If your project includes code, libraries, or assets from third parties, ensure that you comply with their licenses. Check the licenses of any dependencies and follow their requirements.</li>
+</ul>
+<ol start="4">
+<li>Use License Files:</li>
+</ol>
+<ul>
+<li>Include a LICENSE file in your repository that contains the full text of the chosen license. This makes it clear to users how they can use your code.</li>
+</ul>
+<ol start="5">
+<li>Add a NOTICE File:</li>
+</ol>
+<ul>
+<li>If required by your license, include a NOTICE file to give attribution to contributors and provide any additional information required by the license.</li>
+</ul>
+<ol start="6">
+<li>Avoid Unauthorized Code:</li>
+</ol>
+<ul>
+<li>Do not include code or assets in your repository that you do not have the legal right to use. This includes proprietary code or assets without permission.</li>
+</ul>
+<ol start="7">
+<li>Handle Sensitive Information Carefully:</li>
+</ol>
+<ul>
+<li>Avoid committing sensitive information, such as API keys, passwords, or personal data, to your repository. Use environment variables or configuration files outside of your repository for such information.</li>
+</ul>
+<ol start="8">
+<li>Use Private Repositories if Necessary:</li>
+</ol>
+<ul>
+<li>If your project contains sensitive or proprietary information that should not be public, consider using a private repository on GitHub. Private repositories restrict access to collaborators you invite.</li>
+</ul>
+<ol start="9">
+<li>Collaborate Transparently:</li>
+</ol>
+<ul>
+<li>Clearly document your project’s contributors and give proper credit to their contributions. Use the GitHub “Contributors” section and include their names in your README or documentation.</li>
+</ul>
+<ol start="10">
+<li>
+<p>Maintain a Contributor License Agreement (CLA):</p>
+<ul>
+<li>If your project is widely used and you want to manage contributions and intellectual property more formally, consider implementing a Contributor License Agreement (CLA). CLAs define the terms under which contributions are made.</li>
+</ul>
+</li>
+<li>
+<p>Regularly Review and Update:</p>
+<ul>
+<li>Periodically review your project to ensure that it complies with licenses and any legal requirements. Update licenses and dependencies as needed.</li>
+</ul>
+</li>
+<li>
+<p>Seek Legal Advice:</p>
+<ul>
+<li>If you have complex IP concerns or are unsure about any legal matters, consider seeking legal advice from a qualified attorney experienced in open-source licensing and intellectual property.</li>
+</ul>
+</li>
+</ol>
+<p>By following these guidelines and being mindful of intellectual property considerations, you can safely and responsibly share GitHub repositories while respecting the rights of contributors and third-party dependencies.</p>
+<h2 id="64-social">6.4 Social</h2>
+<h3 id="follow-people-organisations">Follow people, organisations:</h3>
+<p>You can follow people on GitHub to receive notifications about their activity and discover projects in their communities.</p>
+<p>When you follow people, you’ll see their public activity on your personal dashboard. If someone you follow stars a public repository, GitHub may recommend the repository to you. For more information, see “About your personal dashboard.”</p>
+<p>You can unfollow someone if you do not wish to see their public activity on GitHub.</p>
+<div class="codehilite"><pre><span></span><code>Following a user on GitHub:
+</code></pre></div>
+
+<ul>
+<li>Navigate to the user’s profile page.</li>
+<li>
+<p>Under the user’s profile picture, click Follow.</p>
+<p>Unfollowing a user on GitHub:</p>
+</li>
+<li>
+<p>Navigate to the user’s profile page.</p>
+</li>
+<li>
+<p>Under the user’s profile picture, click Unfollow.</p>
+<p>Viewing followed users on GitHub:</p>
+</li>
+<li>
+<p>Navigate to the user’s profile page.</p>
+</li>
+<li>Under the user’s profile picture, click following.</li>
+</ul>
+<p>GitHub also provide ways to keep track of users and their activity on the platform. Here’s how you can do it:</p>
+<ol>
+<li>Watch Users’ Repositories:</li>
+</ol>
+<p>You can watch repositories created by users you are interested in. When you watch a repository, you’ll receive notifications about its activity, including issues, pull requests, and discussions. To watch a repository:</p>
+<ul>
+<li>
+<p>Go to the user’s repository that you want to watch.</p>
+</li>
+<li>
+<p>Click the “Watch” button at the top-right of the repository page.</p>
+</li>
+<li>
+<p>Choose whether you want to be notified for “All activity,” “Releases only,” or “Not notified.” Select your preference.</p>
+</li>
+</ul>
+<ol start="2">
+<li>Star Repositories:</li>
+</ol>
+<p>Starring a repository is a way to bookmark or mark a repository as interesting. While it doesn’t directly notify you about the user’s activity, it helps you keep track of repositories you find noteworthy. To star a repository:</p>
+<ul>
+<li>
+<p>Go to the user’s repository that you want to star.</p>
+</li>
+<li>
+<p>Click the “Star” button at the top-right of the repository page.</p>
+</li>
+</ul>
+<ol start="3">
+<li>Follow Users on Twitter or Other Social Media:</li>
+</ol>
+<p>Some GitHub users share their activity and updates on social media platforms like Twitter. If you want to keep up with someone’s GitHub activity, you can follow them on these external platforms where they may share links to their GitHub repositories and updates.</p>
+<ol start="4">
+<li>Explore GitHub Activity:</li>
+</ol>
+<p>You can explore GitHub’s activity feed, which shows public activity from users you follow or repositories you’ve starred. This can help you keep track of recent contributions by users you are interested in.</p>
+<p>To access your activity feed, go to your GitHub homepage when you’re logged in, and you’ll see a feed of recent activity from users and repositories you follow.</p>
+<p>Please note that GitHub’s features and interface may change over time, so it’s a good idea to check the GitHub documentation or the platform itself for any updates or changes in how you can follow or interact with other users. Additionally, GitHub’s main focus is on collaboration and open-source projects, so it may not provide the same level of social interaction features as traditional social media platforms.</p>
+<h3 id="watching-the-repository">Watching the repository</h3>
+<p>To watch a GitHub repository means to receive notifications and updates about its activity, including new issues, pull requests, comments, and more. It’s a way to stay informed about changes happening in repositories you’re interested in. Here’s how to watch a GitHub repository:</p>
+<ol>
+<li>Navigate to the Repository:</li>
+</ol>
+<p>Go to the GitHub repository you want to watch. You can do this by entering the repository’s URL in your web browser or by searching for the repository on GitHub.</p>
+<ol start="2">
+<li>Watch the Repository:</li>
+</ol>
+<p>Once you’re on the repository page, you’ll see a button at the top-right corner labeled “Watch.” Click on it.</p>
+<ol start="3">
+<li>Choose Notification Settings:</li>
+</ol>
+<p>After clicking “Watch,” a dropdown menu will appear with options for notification settings. You can select one of the following options:</p>
+<ul>
+<li>
+<p>Not watching: This means you won’t receive any notifications.</p>
+</li>
+<li>
+<p>Watching: You’ll receive notifications for all activity, including issues, pull requests, and more.</p>
+</li>
+<li>
+<p>Custom: You can customize your notification preferences. This allows you to choose which types of events you want to be notified about.</p>
+</li>
+</ul>
+<ol start="4">
+<li>Confirm Your Selection:</li>
+</ol>
+<p>Once you’ve chosen your notification settings, click on the option you prefer. A checkmark will appear next to your selection.</p>
+<ol start="5">
+<li>Star the Repository (Optional):</li>
+</ol>
+<p>While watching a repository doesn’t require you to star it, you might want to do so if you find the repository particularly interesting or useful. Starring a repository is similar to bookmarking it.</p>
+<p>To star a repository, you can click the “Star” button located next to the “Watch” button at the top-right corner of the repository page.</p>
+<ol start="6">
+<li>Unwatch or Manage Notifications (Optional):</li>
+</ol>
+<p>If you ever want to stop watching a repository or manage your notification settings, you can do so by going to the repository and clicking the “Unwatch” button (which will appear in place of the “Watch” button after you’ve started watching it). You can also manage your notification settings in your GitHub account settings.</p>
+<p>By following these steps, you’ll start watching the GitHub repository, and you’ll receive notifications based on your chosen notification settings whenever there is activity in that repository. Watching repositories is a great way to stay up-to-date with open-source projects, track issues, and engage with the GitHub community.</p>
+<h3 id="community-support">Community support</h3>
+<p>Getting community support on GitHub involves engaging with the open-source community to seek help, share knowledge, and collaborate on projects. Here are several ways you can get community support on GitHub:</p>
+<ol>
+<li>GitHub Discussions:</li>
+</ol>
+<ul>
+<li>Many repositories have a “Discussions” tab where you can ask questions, share ideas, or seek help from maintainers and the community. You can start or participate in discussions related to the project.</li>
+</ul>
+<ol start="2">
+<li>Issue Tracker:</li>
+</ol>
+<ul>
+<li>If you encounter a bug or have a specific problem with a project, check the project’s issue tracker. Often, there are existing issues or bug reports that can help you find solutions or workarounds. You can also open a new issue to report problems or request assistance.</li>
+</ul>
+<ol start="3">
+<li>Contribute to Open-Source Projects:</li>
+</ol>
+<ul>
+<li>Actively participating in open-source projects can help you build relationships with maintainers and other contributors. By contributing code, documentation, or bug fixes, you can become part of the community and receive support from experienced contributors.</li>
+</ul>
+<ol start="4">
+<li>Read the Documentation:</li>
+</ol>
+<ul>
+<li>Always start by reading the project’s documentation. Many common questions are answered in project documentation, including installation instructions, configuration details, and usage guidelines.</li>
+</ul>
+<ol start="5">
+<li>Stack Overflow:</li>
+</ol>
+<ul>
+<li>Sometimes, GitHub projects have a presence on Stack Overflow. You can search for questions related to the project using the project’s name as a tag and find answers or ask your own questions.</li>
+</ul>
+<ol start="6">
+<li>GitHub Discussions in Related Organizations:</li>
+</ol>
+<ul>
+<li>If a project doesn’t have a dedicated “Discussions” section, it may be part of a larger organization or community. Check the organization’s or community’s GitHub repository or forum for relevant discussions and support.</li>
+</ul>
+<ol start="7">
+<li>Twitter and Social Media:</li>
+</ol>
+<ul>
+<li>Some open-source maintainers and projects share updates and interact with the community on Twitter and other social media platforms. Following these accounts can keep you informed and provide opportunities to engage.</li>
+</ul>
+<ol start="8">
+<li>Meetups and Conferences:</li>
+</ol>
+<ul>
+<li>Some open-source communities organize virtual or in-person meetups and conferences. Attending these events can help you connect with maintainers and other community members.</li>
+</ul>
+<ol start="9">
+<li>GitHub Actions and CI/CD Workflows:</li>
+</ol>
+<ul>
+<li>If you’re having trouble with CI/CD workflows or GitHub Actions, consult the GitHub Actions documentation, and consider asking questions on the GitHub Community Forum’s Actions category.</li>
+</ul>
+<ol start="10">
+<li>
+<p>GitHub Community Forum:</p>
+<ul>
+<li>The <a href="https://github.community/">GitHub Community Forum</a> is a place where GitHub users discuss various topics related to GitHub. You can ask questions, share knowledge, and connect with other users.</li>
+</ul>
+</li>
+<li>
+<p>Documentation Feedback:</p>
+<ul>
+<li>If you find issues or inaccuracies in a project’s documentation, consider opening a documentation-related issue in the project’s repository. This helps improve the documentation for everyone.</li>
+</ul>
+</li>
+</ol>
+<p>When seeking community support on GitHub, remember to be respectful, provide clear information about your issue or question, and follow any guidelines or codes of conduct set by the project maintainers and the community. Your active and constructive participation in the community can lead to valuable connections and a positive experience.</p>
+<h3 id="exploring-projects">Exploring projects</h3>
+<p>Exploring GitHub projects is a great way to discover interesting open-source repositories, contribute to existing projects, or find solutions to coding challenges. Here’s how you can explore GitHub projects:</p>
+<ol>
+<li>GitHub Explore Page:</li>
+</ol>
+<p>The GitHub Explore page is a curated collection of repositories and topics. You can access it by going to https://github.com/explore. Here, you’ll find various categories and topics to explore, such as trending repositories, programming languages, and more.</p>
+<ol start="2">
+<li>GitHub Search:</li>
+</ol>
+<p>Use GitHub’s search bar to find repositories based on keywords, topics, or user accounts. You can enter specific search queries like “JavaScript frameworks,” “machine learning,” or “web development” to find relevant projects.</p>
+<ul>
+<li>To search for repositories, go to the GitHub homepage (https://github.com/) and enter your query in the search bar at the top.</li>
+</ul>
+<ol start="3">
+<li>Browse GitHub Topics:</li>
+</ol>
+<p>GitHub has a Topics feature that allows repository owners to add relevant topics to their projects. You can browse these topics to find repositories related to specific areas of interest.</p>
+<ul>
+<li>To browse topics, go to https://github.com/topics and select a topic that interests you.</li>
+</ul>
+<ol start="4">
+<li>GitHub Collections:</li>
+</ol>
+<p>GitHub Collections are themed collections of repositories created by GitHub. These collections often include repositories that are grouped by subject or purpose, making it easier to discover projects.</p>
+<ul>
+<li>To access GitHub Collections, visit https://github.com/collections.</li>
+</ul>
+<ol start="5">
+<li>Explore GitHub Trending:</li>
+</ol>
+<p>GitHub Trending showcases the most popular repositories and projects on GitHub for a specific timeframe (daily, weekly, or monthly). This is a great way to discover what’s currently trending in the open-source community.</p>
+<ul>
+<li>To view GitHub Trending, go to https://github.com/trending.</li>
+</ul>
+<ol start="6">
+<li>Use GitHub’s Advanced Search:</li>
+</ol>
+<p>GitHub offers an advanced search feature that allows you to filter repositories based on various criteria, such as stars, forks, programming languages, and more. You can access it by clicking “Advanced search” next to the search bar on the GitHub homepage.</p>
+<ol start="7">
+<li>GitHub Topics in Repositories:</li>
+</ol>
+<p>When you visit a repository on GitHub, you can explore the topics associated with it. These topics can provide additional context about the project and related technologies.</p>
+<ol start="8">
+<li>Follow Users and Organizations:</li>
+</ol>
+<p>Consider following GitHub users and organizations whose projects interest you. Their activity and repositories will appear in your GitHub feed, making it easier to discover new projects.</p>
+<ol start="9">
+<li>GitHub Discussions and README Files:</li>
+</ol>
+<p>Explore the “Discussions” tab and the README file of repositories. These sections often contain valuable information about the project’s goals, how to get started, and potential ways to contribute.</p>
+<ol start="10">
+<li>
+<p>Participate in Open Source Events:</p>
+<p>Join open-source events such as Hacktoberfest or specific community events organized around a programming language or technology. These events often promote collaboration and can help you discover interesting projects.</p>
+</li>
+</ol>
+<p>Remember that GitHub is a vast platform with millions of repositories covering a wide range of topics and technologies. Take your time to explore, read documentation, and engage with the community to find the projects that align with your interests and goals.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../chapter_05/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 5. Advanced topics">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                5. Advanced topics
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../references/" class="md-footer__link md-footer__link--next" aria-label="Next: References">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                References
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      By the ELIXIR Training Platform
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.footer", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+    
+  </body>
+</html>
